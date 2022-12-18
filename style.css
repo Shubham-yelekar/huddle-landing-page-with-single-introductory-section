@@ -41,6 +41,13 @@ body :nth-child(1){
     
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 80vh;
+}
+
 
 
 .mockups {
@@ -92,35 +99,42 @@ button:hover {
     color: white;
 }
 
-.links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-
-    width: 100%;
-    height: 40px;
-}
-
 .links svg {
-    height: 100%;
-    padding: 5px;
-    border: 1px solid white;
-    color: white;
-    border-radius: 50px;
-
+    color: aliceblue;
+    margin: 0pc 5px;
     cursor: pointer;
 
     transition: all 0.3s ease-in;
 }
 
-.links:hover {
-    color: var(--Magenta);
-    
-}
-
 .links svg:hover {
     color: var(--Magenta);
-    
 }
+
+@media screen and (min-width: 1400px) {
+    .container {
+
+      flex-direction: row;
+      gap: 5rem;
+    max-width: 1200px;
+      justify-content: space-between;
+    }
+
+    article {
+        align-items: flex-start;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .links{
+        align-self: flex-end;
+        
+    }
+  }
